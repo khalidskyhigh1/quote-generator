@@ -3,11 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Famous Quotes</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(120deg, #89f7fe, #66a6ff);
+            color: #111;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 2rem;
+        }
+        button {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 10px;
+            background: #ff6f61;
+            color: white;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        #quoteBox {
+            margin-top: 2rem;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            display: none;
+            max-width: 600px;
+            font-style: italic;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, Ross William Ulbricht is an American who created and operated Silk Road, the first modern darknet market, from 2011 until his arrest in 2013. Silk Road was an online marketplace that facilitated the trade in narcotics and other illegal products and services. Sales were anonymous, using bitcoin.!</h1>
-    <canvas width="800" height="600"></canvas>
-<samp></samp><a href="http://" target="_blank" rel="noopener noreferrer"></a>
+    <h1>Click for a Famous Quote 📜</h1>
+    <button id="showQuoteBtn">Show Quote</button>
+    <div id="quoteBox"></div>
+
+    <script>
+        const quotes = [
+            "“The only limit to our realization of tomorrow is our doubts of today.” – Franklin D. Roosevelt",
+            "“In the middle of difficulty lies opportunity.” – Albert Einstein",
+            "“I think, therefore I am.” – René Descartes",
+            "“Be the change that you wish to see in the world.” – Mahatma Gandhi",
+            "“Imagination is more important than knowledge.” – Albert Einstein",
+            "“Success is not final, failure is not fatal: It is the courage to continue that counts.” – Winston Churchill",
+            "“The journey of a thousand miles begins with a single step.” – Lao Tzu",
+            "“Life is what happens when you're busy making other plans.” – John Lennon",
+            "“You miss 100% of the shots you don’t take.” – Wayne Gretzky",
+            "“Do what you can, with what you have, where you are.” – Theodore Roosevelt",
+            "“Happiness is not something ready made. It comes from your own actions.” – Dalai Lama",
+            "“What we achieve inwardly will change outer reality.” – Plutarch",
+            "“The best way to predict the future is to create it.” – Peter Drucker",
+            "“Knowledge is power.” – Francis Bacon",
+            "“Not everything that is faced can be changed, but nothing can be changed until it is faced.” – James Baldwin",
+            "“The greatest glory in living lies not in never falling, but in rising every time we fall.” – Nelson Mandela",
+            "“Do not go where the path may lead, go instead where there is no path and leave a trail.” – Ralph Waldo Emerson",
+            "“Try not to become a man of success. Rather become a man of value.” – Albert Einstein",
+            "“To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.” – Ralph Waldo Emerson",
+            "“The purpose of our lives is to be happy.” – Dalai Lama",
+            "“Dream big and dare to fail.” – Norman Vaughan",
+            "“Turn your wounds into wisdom.” – Oprah Winfrey",
+            "“Every strike brings me closer to the next home run.” – Babe Ruth",
+            "“Courage is resistance to fear, mastery of fear, not absence of fear.” – Mark Twain",
+            "“Do not wait to strike till the iron is hot; but make it hot by striking.” – William Butler Yeats",
+            "“Act as if what you do makes a difference. It does.” – William James",
+            "“It always seems impossible until it's done.” – Nelson Mandela",
+            "“Keep your friends close, but your enemies closer.” – Sun Tzu",
+            "“Not all those who wander are lost.” – J.R.R. Tolkien",
+            "“The mind is everything. What you think you become.” – Buddha",
+            "“Do not let what you cannot do interfere with what you can do.” – John Wooden",
+            "“The future belongs to those who believe in the beauty of their dreams.” – Eleanor Roosevelt",
+            "“Great minds discuss ideas; average minds discuss events; small minds discuss people.” – Eleanor Roosevelt",
+            "“We are what we repeatedly do. Excellence, then, is not an act, but a habit.” – Aristotle",
+            "“It is never too late to be what you might have been.” – George Eliot",
+            "“Nothing will work unless you do.” – Maya Angelou",
+            "“If you tell the truth, you don't have to remember anything.” – Mark Twain",
+            "“The best revenge is massive success.” – Frank Sinatra",
+            "“Every moment is a fresh beginning.” – T.S. Eliot",
+            "“The harder the conflict, the greater the triumph.” – George Washington",
+            "“Keep going. Be all in.” – Bryan Hutchinson"
+        ];
+
+        const button = document.getElementById("showQuoteBtn");
+        const quoteBox = document.getElementById("quoteBox");
+
+        button.addEventListener("click", () => {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            quoteBox.textContent = quotes[randomIndex];
+            quoteBox.style.display = "block";
+        });
+    </script>
 </body>
 </html>
